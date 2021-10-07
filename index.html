@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required META Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Web Storage</title>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/chat.css" />
+    <link rel="stylesheet" href="css/tooltip.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Local Web Storage</h1>
+        <p>Store data locally within the client's browser.</p>
+        <span style="position:absolute; top:25px; right:25px;">
+            <a href="https://www.w3schools.com/html/html5_webstorage.asp" target="_blank">Learn More Here!</a>
+        </span>
+        <hr>    
+    </header>
+    
+    <div class="container">
+        <div class="chatArea">
+
+            <div class="column">
+
+                <div class="tooltip">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">Local Storage</a>
+                    <span class="tooltiptext">localStorage doesn't expire and must be cleared manually</span>
+                </div>
+
+                <textarea id="localStorageContent" rows="20" disabled></textarea>
+                <button onclick="addToLocalStorage()" class="addButton">Add to Local Storage</button>
+                <button onclick="clearLocalStorage()" class="clearButton">Clear Local Storage</button>
+            </div>
+
+            <div class="column">
+
+                <div class="tooltip">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage" target="_blank">Session Storage</a>
+                    <span class="tooltiptext">sessionStorage is cleared when the page session ends</span>
+                </div>
+
+                <textarea id="sessionStorageContent" rows="20" disabled></textarea>
+                <button onclick="addToSessionStorage()" class="addButton">Add to Session Storage</button>    
+                <button onclick="clearSessionStorage()" class="clearButton">Clear Session Storage</button>
+            </div>
+
+        </div>
+
+        <div class="console"> 
+            <h2>User Input: &nbsp;</h2>           
+            <input type="text" id="userInput" size="60%" style="text-align: center;"/>    
+        </div>
+
+
+    </div>
+
+    <footer>
+        <center>
+            <h2>Get The Project Code!</h2>
+            <a href="https://github.com/joshjabs/LocalStorage" target="_blank">
+                <img src="https://raw.githubusercontent.com/flocke/andOTP/master/assets/badges/get-it-on-github.png" style="width:200px;"/>
+            </a>
+            <p>This is a free educational resource released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>.</p>
+            <p>Use, build, and snip from this project however you like!</p>
+            <br><br>
+        </center>
+    </footer>
+
+    
+    <script src="storage.js"></script>
+    
+</body>
+</html>
